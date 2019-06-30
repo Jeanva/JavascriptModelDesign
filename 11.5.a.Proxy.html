@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    function callback(data){
+        console.log('成功接收数据',data);
+    }
+</script>
+<iframe name="proxyframe" id="proxyIframe" src=""></iframe>
+<form action="http://localhost/proxy.php" method="post" target="proxyIframe">
+    <input type='text' name='callback' value='callback'/>
+    <input type='text' name='proxy' value='http://localhost:5500/11.5.b.proxy.html' />
+    <input type='submit' value='提交' />
+</form>
+</html>
