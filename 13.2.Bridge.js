@@ -4,6 +4,7 @@ function changeColor(dom, color, bg){console.log(dom);
     dom.style.color = color;
     // 设置元素的背景颜色
     dom.style.background = bg;
+    dom.innerHTML+='改变';
 }
 
 let span = document.getElementsByTagName('span');

@@ -50,12 +50,12 @@ People.prototype.init = function(){
     this.font.say();
 }
 
-function Sprite(x,y,c,s){
+function Spirite(x,y,c,s){
     this.speed = new Speed(x,y);
     this.color = new Color(c);
     this.shape = new Shape(s);
 }
-Sprite.prototype.init = function(){
+Spirite.prototype.init = function(){
     this.speed.run();
     this.color.draw();
     this.shape.change();
