@@ -15,7 +15,7 @@
         width:300px;height:200px; padding:20px;
         text-align: center;
         }
-    .a-confirm, .a-confirmright ,.a-close { 
+    .a-confirm, .a-confirmright ,.a-close,.a-closeright { 
         background:#f2f1ff;
         border-radius: 2px;
         width:50px; height:30px;
@@ -24,7 +24,10 @@
         margin-right:20px;
         display: inline-block;
     }
-    .a-close:after{content:'关闭';color: red; }
+    .a-closeright {
+        float:right;
+    }
+    .a-close:after,.a-closeright:after{content:'关闭';color: red; }
     </style>
 </head>
 <body>

@@ -44,3 +44,19 @@ var vdata2 = {
 };
 var titleAlert = new TitleAlert(vdata2);
 // titleAlert.init();
+
+
+// 章节作业 实现右侧取消按钮提示框
+var RightCancelAlert = function(data){
+    Alert.call(this,data);
+    this.closeBtn.className =this.closeBtn.className+ 'right';
+}
+RightCancelAlert.prototype = new Alert();
+var workData = {
+    content:'作业右侧取消按钮提示框',
+    title:'我是标题',
+    success:()=>(console.log('成功')),
+    fail:()=>console.log('失败了，取消！')
+}
+var rightCancel = new RightCancelAlert(workData);
+rightCancel.init();
