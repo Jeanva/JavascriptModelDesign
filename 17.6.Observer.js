@@ -39,7 +39,7 @@ function $(id){
     Observer.regist('addCommentMessage',changeMsgNum)
             .regist('removeCommentMessage',changeMsgNum);
 })();
-
+                                                                                     
 // 工程师C
 (function(){
     // 用户点击提交按钮
