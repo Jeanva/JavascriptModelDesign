@@ -1,6 +1,8 @@
 const express = require('express');
 const querystring = require('querystring');
+const cors = require('cors');
 var app = express();
+    app.use(cors());
 var server = app.listen(3001,(req,res)=>{
     console.log('服务器已启动',req);
 });
@@ -21,6 +23,8 @@ app.get('/home',(req,res)=>{
 });
 
 app.get('/list',(req,res)=>{
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Methods","PUT,POST,GET,DELETE,OPTIONS");
     var list=[
         {name:'星期一',task:'上班'},
         {name:'星期二',task:'上班+学习'},
@@ -28,4 +32,12 @@ app.get('/list',(req,res)=>{
     ];
     console.log('请求');
     res.json(list);
+});
+
+app.get('/chain',(req,res)=>{
+    res.header('Access-Control-Allow-Origin','*');
+    res.header('Access-Control-Allow-Methods','PUT,POST,GET,DELETE,OPTIONS');
+    console.log(req.query);
+    res.send(req.query.callback+'('+req.query.data+')');
+    // res.json(req);
 });

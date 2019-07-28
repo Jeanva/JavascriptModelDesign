@@ -7,7 +7,7 @@ function $tag(tag , context){
 $tag('input')[1].onclick = function(){
     // 获取输入框内得内容
     var value = $tag('input')[0].value;
-
+    
     InputStrategy.addStrategy('nickname',function(value){
         return /^[a-zA-Z]\w{3,7}$/.test(value) ? '':'请输入4-8位昵称,如yyyy'
     });

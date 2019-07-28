@@ -24,7 +24,9 @@ var InputStrategy = function(){
         }
     }
 }();
+
 var result1 =InputStrategy.check('number','23212423');
+// 19.7
 var result2 = InputStrategy.addStrategy('text',function(value){
     return /^\w+$/g.test(value) ? console.log(value): console.log('请输入文字!');
 });

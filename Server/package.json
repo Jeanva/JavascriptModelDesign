@@ -4,8 +4,9 @@
   "description": "",
   "main": "server.js",
   "dependencies": {
-    "express-generator": "^4.16.1",
-    "express": "^4.17.1"
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-generator": "^4.16.1"
   },
   "devDependencies": {},
   "scripts": {
