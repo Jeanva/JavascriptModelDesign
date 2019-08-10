@@ -11,7 +11,7 @@ var showHideNavWidget = function(mod,tag,showOrHide){
         // 获取下面的标签名为 tag 的元素
         tag = mod.getElementsByTagName(tag),
         // 如果设置为false或者为hide则值为hidden, 否则为visible
-        showOrHide = (!showOrHide || showOrHide=='hide')?'hidden' :'visible';console.log(tag);
+        showOrHide = (!showOrHide || showOrHide=='hide')?'hidden' :'visible';
     // 占位隐藏这些标签
     for(var i=tag.length-1;i>=0;i--){
         tag[i].style.visibility = showOrHide;

@@ -41,3 +41,7 @@ app.get('/chain',(req,res)=>{
     res.send(req.query.callback+'('+req.query.data+')');
     // res.json(req);
 });
+
+app.post('/getNewsData',(req,res)=>{
+    console.log(req);
+});
