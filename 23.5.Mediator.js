@@ -46,10 +46,16 @@ var showHideNavWidget = function(mod,tag,showOrHide){
     Mediator.register('hideAllNavNum',function(){
         showHideNavWidget('recommend_nav','b',false);
     });
+    Mediator.register('hideAllNavUrl',function(){
+        showHideNavWidget('recommend_nav','span',false);
+    });
     // 订阅显示推荐用户导航消息提醒消息
     Mediator.register('showAllNavNum',function(){
         showHideNavWidget('recommend_nav','b',true);
     })
+    Mediator.register('showAllNavUrl',function(){
+        showHideNavWidget('recommend_nav','span',true);
+    });
 })();
 
 // 最近常用导航
