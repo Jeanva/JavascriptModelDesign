@@ -11,7 +11,7 @@ var Visitor =(function(){
         // 追加数据方法
         push: function(){
             // 强化类数组对象，使它拥有length属性
-            var len = arguments[0].length || 0;
+            var len = arguments[0].length || 0; console.log('len',len);
             // 添加的数据从原参数的第二个参数算起
             var args = this.splice(arguments,1);
             // 校正length 属性
