@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>哇哈哈哈哈</p>
+    <ul id="container">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+    </ul>
+</body>
+<script src="25.2.Iterator.js"></script>
+<script>
+    var demo = new Iterator('li','container');
+    console.log(demo.first());
+    console.log(demo.pre());
+    console.log(demo.next());
+    console.log(demo.get(2000));
+    // 处理所有元素
+    demo.dealEach(function(text,color){
+        this.innerHTML = text;          // 设置内容
+        this.style.background = color;  // 设置背景色
+    },'test','pink');
+    // 排他思想处理第3个与第4个元素
+    demo.exclusive([2,3],function(){
+        this.innerHTML = '被排除的';
+        this.style.background = 'green';
+    },function(){
+        this.innerHTML = '选中的';
+        this.style.background = 'red';
+    })
+</script>
+</html>

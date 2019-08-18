@@ -19,7 +19,7 @@ var Page = function(){
            $.post('http://localhost:3001/getNewsData',{
                // 请求携带数据 page 页码
                page : page
-           },function(res){
+           },function(res){console.log('res',res);
                // 成功返回
                if(res.errNo == 0){
                    // 显示该页数据
@@ -47,6 +47,6 @@ $('#next_page').click(function(){
     // 获取并显示新闻
     Page(page,function(){
         // 修正新闻内容元素当前页数据
-        $news.data('page',page +1);
+        $news.data('page',page +1);console.log('page',page);
     })
 })
