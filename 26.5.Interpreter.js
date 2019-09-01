@@ -27,7 +27,7 @@ var Interpreter = (function(){
             return '';
         }
     }
-    // 参数1 node:目标节点 参数儿 wrap: 容器节点
+    // 参数1 node:目标节点 参数2 wrap: 容器节点
     return function(node, wrap){
     // 路径数组
         var path = [],

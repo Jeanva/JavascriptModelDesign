@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="btn_container">
+        <button id="btn">demo</button>
+    </div>
+</body>
+<script>
+    var g = function(id){ 
+        return document.getElementById(id);
+    }
+    // g('btn').onclick = function(){
+    //     g('btn').onclick = null;
+    //     g('btn_container').innerHTML = '触发事件';
+    // }
+    g('btn_container').onclick = function(e){
+        // 获取触发事件元素
+        var target = e && e.target || window.event.srcElement;
+        // 判断出发时间元素是否时id为btn地元素
+        if(target.id === 'btn'){
+            // 重置父元素内容
+            g('btn_container').innerHTML = '出发时间';
+        }
+    }
+</script>
+</html>
