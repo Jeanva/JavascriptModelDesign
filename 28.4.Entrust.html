@@ -28,5 +28,15 @@
             g('btn_container').innerHTML = '出发时间';
         }
     }
+// 课后作业
+function delegate(context,target,type,fn){
+    var targets = context.getElementsByTagName(target);
+    for(let i in targets){
+        targets[i]['on'+type] = fn;
+    }
+}
+delegate(document.body,'button','click',function(){
+    console.log('委托成功!');
+});
 </script>
 </html>

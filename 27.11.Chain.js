@@ -1,31 +1,31 @@
 // 对象拓展
-// A.extend = A.fn.extend = function(){//console.log(arguments[0]);
-//     // 拓展对象从第二个参数算起
-//     var i =1,
-//         // 获取参数长度
-//         len = arguments.length,
-//         // 第一个参数为源对象
-//         target = arguments[0],
-//         // 拓展对象中的属性
-//         j;
-//     // 如果只传一个参数
-//     if(i == len ){
-//         // 元对象为当前对象
-//         target = this; //console.log(this);
-//         // i从0计数
-//         i-- ;
-//     }
-//     // 遍历参数中拓展对象
-//     for(;i< len ; i++){
-//         // 遍历拓展对象中的属性
-//         for(j in arguments[i]){
-//             // 拓展源对象
-//             target[j] = arguments[i][j]; //console.log('arguments[i][j]',arguments[i],target[j]);
-//         }
-//     }
-//     // 返回源对象
-//     return target;
-// }
+A.extend = A.fn.extend = function(){//console.log(arguments[0]);
+    // 拓展对象从第二个参数算起
+    var i =1,
+        // 获取参数长度
+        len = arguments.length,
+        // 第一个参数为源对象
+        target = arguments[0],
+        // 拓展对象中的属性
+        j;
+    // 如果只传一个参数
+    if(i == len ){
+        // 元对象为当前对象
+        target = this; //console.log(this);
+        // i从0计数
+        i-- ;
+    }
+    // 遍历参数中拓展对象
+    for(;i< len ; i++){
+        // 遍历拓展对象中的属性
+        for(j in arguments[i]){
+            // 拓展源对象
+            target[j] = arguments[i][j]; console.log('arguments[i][j]',arguments[i],target[j]);
+        }
+    }
+    // 返回源对象
+    return target;
+}
 
 // 拓展一个对象
 var demo1 = A.extend({first:1},{second:2},{third:3});

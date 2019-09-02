@@ -37,3 +37,4 @@ $.get('./deal.php?',function(res){
         Deal[i] && Deal[i](res[i]);
     }
 })
+

@@ -110,7 +110,7 @@ A.fn.extend({
     // 获取或者设置元素的内容
     html: function(){
         var arg = arguments,
-            len = arg.length;console.log(arg);
+            len = arg.length; //console.log(arg);
         // 无参数则获取第一个元素的内容
         if(len === 0){
             return this[0] && this[0].innerHTML;
